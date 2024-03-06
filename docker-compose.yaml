@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_USER=demo
+      - POSTGRES_PASSWORD=demo
+      - POSTGRES_DB=demo
+    ports:
+      - 5432:5432
+    volumes:
+      - demo-db:/var/lib/postgres
+volumes:
+  demo-db:
